@@ -1,5 +1,6 @@
 package com.mattfx.mcmodtut;
 
+import com.mattfx.mcmodtut.configuration.ConfigurationHandler;
 import com.mattfx.mcmodtut.proxy.IProxy;
 import com.mattfx.mcmodtut.reference.Reference;
 import cpw.mods.fml.common.Mod;
@@ -20,6 +21,7 @@ public class MCModTut {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 
     }
 
