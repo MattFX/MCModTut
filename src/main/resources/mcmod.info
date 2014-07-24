@@ -1,0 +1,18 @@
+[
+{
+  "modid": "MCModTut",
+  "name": "MC Mod Tut",
+  "description": "Pahimar's Let's Mod series.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "Pahimar","MattFX"
+  ],
+  "credits": "The Forge and FML guys, and Pahimar.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
