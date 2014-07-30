@@ -4,6 +4,7 @@ import com.mattfx.mcmodtut.handler.ConfigurationHandler;
 import com.mattfx.mcmodtut.proxy.IProxy;
 import com.mattfx.mcmodtut.reference.Reference;
 import com.mattfx.mcmodtut.utility.LogHelper;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -23,6 +24,7 @@ public class MCModTut {
     public void preInit(FMLPreInitializationEvent event)
     {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+        FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         LogHelper.info("Pre Initialisation Complete!");
 
     }
