@@ -1,15 +1,16 @@
 package com.mattfx.mcmodtut;
 
-import com.mattfx.mcmodtut.configuration.ConfigurationHandler;
+import com.mattfx.mcmodtut.handler.ConfigurationHandler;
 import com.mattfx.mcmodtut.proxy.IProxy;
 import com.mattfx.mcmodtut.reference.Reference;
+import com.mattfx.mcmodtut.utility.LogHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid= Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION)
+@Mod(modid= Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class MCModTut {
 
     @Mod.Instance(Reference.MOD_ID)
@@ -22,18 +23,21 @@ public class MCModTut {
     public void preInit(FMLPreInitializationEvent event)
     {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+        LogHelper.info("Pre Initialisation Complete!");
 
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        LogHelper.info("Initialisation Complete!");
 
     }
 
     @Mod.EventHandler
     public void PostInit(FMLPostInitializationEvent event)
     {
+        LogHelper.info("Post Initialisation Complete!");
 
     }
 }

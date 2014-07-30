@@ -3,7 +3,7 @@
   "modid": "MCModTut",
   "name": "MC Mod Tut",
   "description": "Pahimar's Let's Mod series.",
-  "version": "${version}",
+  "version": "1.0",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
