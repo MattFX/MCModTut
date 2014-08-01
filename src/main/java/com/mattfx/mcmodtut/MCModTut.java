@@ -1,6 +1,7 @@
 package com.mattfx.mcmodtut;
 
 import com.mattfx.mcmodtut.handler.ConfigurationHandler;
+import com.mattfx.mcmodtut.init.ModItems;
 import com.mattfx.mcmodtut.proxy.IProxy;
 import com.mattfx.mcmodtut.reference.Reference;
 import com.mattfx.mcmodtut.utility.LogHelper;
@@ -26,6 +27,8 @@ public class MCModTut {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         LogHelper.info("Pre Initialisation Complete!");
+
+        ModItems.init();
 
     }
 
